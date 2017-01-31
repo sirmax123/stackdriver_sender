@@ -4,10 +4,8 @@ metadata:
   name: log-sender
 spec:
   containers:
-  - image: mmazur_log_sender
+  - image: gcr.io/apmap-146422/log_sender/log_sender
     name: log-sender
-#    command: ["/bin/sh"]
-#    args: ["-c", "while true; do  D=`date`; echo ${D}_heartbeat_msg;  sleep 120; done"]
     volumeMounts:
     - mountPath: /d
       name: test-volume

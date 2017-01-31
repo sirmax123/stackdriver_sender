@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: send-test-logs
+spec:
+  containers:
+  - name: send-test-logs
+    image: ubuntu:16.04
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do D=`date`; echo ${D}_heartbeat_msg;  sleep 1; done"]
